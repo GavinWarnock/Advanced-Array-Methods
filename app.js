@@ -257,20 +257,35 @@ console.log(ingrediantChosen)
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
-
+function problemEight(){
+    let cuisineType = dishes.map(function(el){
+        return el.cuisine; 
+    })
+    return cuisineType
+}
+console.log(problemEight())
 
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
-
-
+function problemNine(){
+    let cuisineDish = dishes.map(function(el){
+        return el.cuisine + " " + el.name
+    })
+    return cuisineDish
+}
+console.log(problemNine())
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
-
-
-
-
-
+function problemTen(){
+    let results;
+    results = problemOne()
+    let mappedResults = results.map(function(el){
+        return el.cuisine + " " + el.name
+    })
+    return mappedResults
+}
+console.log(problemTen())
 //BONUS
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
