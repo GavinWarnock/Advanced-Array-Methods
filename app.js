@@ -240,8 +240,20 @@ let chickpeaFood = problemSix()
 console.log(chickpeaFood)
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
-
-
+function problemSeven(){
+    let results;
+    let chosenIngrediant = prompt("Choose an ingrediant.")
+    results = dishes.filter(function(el){
+        if(el.ingredients.includes(chosenIngrediant)){
+            return true
+        }
+        else{
+            return false
+        }})
+    return results
+}
+let ingrediantChosen = problemSeven()
+console.log(ingrediantChosen)
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
